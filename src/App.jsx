@@ -8,7 +8,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<ChenEditor />} />
-        <Route path="/documentation" element={<Documentation />} />
+        <Route path="/how-to-use" element={<Documentation />} />
+        <Route path="*" element={<Documentation />} />
       </Routes>
     </>
   );
