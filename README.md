@@ -1,20 +1,2 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# chen_editor
+Chen Code EditorA custom ER Diagram renderer and Domain Specific Language (DSL) for generating professional Chen Notation Entity-Relationship diagrams.OverviewThis project allows you to rapidly generate Chen ER diagrams using a simple, text-based syntax called "Chen Code". It includes a React-based editor with a force-directed physics engine for automatic layout, and built-in AI prompt generation for seamless integration with LLMs.How to Use with AICopy the Prompt: Copy the strict syntax instructions below.Paste in ChatGPT / AI: Paste the text into your AI tool of choice. Replace the placeholder with your database requirements or homework question.Render Diagram: Take the generated "Chen Code" and paste it directly into the left panel of the editor to instantly visualize the ER diagram.Chen Code Syntax Guide1. EntitiesSyntax: entity [Name]Example: entity Employee2. Weak EntitiesSyntax: weak*entity [Name]Example: weak_entity Dependent3. AttributesSyntax: attr [ParentName] [AttrName] [Flags]Flags (Optional): PK (Primary Key), MV (Multi-valued), DER (Derived).Examples: \* attr Employee EmpID PKattr Employee Phone MV4. Composite AttributesSyntax: attr [ParentAttrName] [ChildAttrName]Example: attr Name FirstName5. RelationshipsSyntax: rel [Entity1] [Card1] [RelName] [Card2] [Entity2] [Total1] [Total2]Cards: 1, M, N, or * (for none).Totals: TOTAL or PARTIAL.Example: rel Department 1 Employs M Employee PARTIAL TOTAL6. Identifying RelationshipsSyntax: ident_rel [Entity1] [Card1] [RelName] [Card2] [WeakEntity] [Total1] [Total2]Example: ident_rel Employee 1 Has N Dependent PARTIAL TOTAL7. Generalization / Specialization (ISA)Syntax: isa [ParentEntity] [Child1] [Child2] ...Example: isa Account Savings CurrentStrict RulesDeclaration Order: Declare entities BEFORE attaching attributes or using them in relationships.No Spaces: Do not use spaces in entity/attribute names. Use CamelCase or underscores.Comments: Use // to write comments.
 # chen_editor
