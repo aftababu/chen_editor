@@ -13,10 +13,9 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:3000",
+        target: "https://chen-editor.aftababu.dev",
         changeOrigin: true,
       },
     },
   },
 });
-

@@ -1,0 +1,9 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /api/
+Disallow: /api/generate-chen/
+Disallow: /_vercel/
+
+Sitemap: https://chen-editor.aftababu.dev/sitemap.xml
